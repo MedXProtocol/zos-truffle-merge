@@ -1,0 +1,33 @@
+{
+  "name": "zos-truffle-merge",
+  "version": "0.0.1",
+  "description": "Merge Zeppelin OS deployed contract addresses into their Truffle build artifacts",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "zos-truffle-merge": "./src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MedXProtocol/zos-truffle-merge.git"
+  },
+  "keywords": [
+    "zeppelin",
+    "zos",
+    "truffle",
+    "contracts",
+    "ethereum"
+  ],
+  "author": "Brendan Asselstine",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MedXProtocol/zos-truffle-merge/issues"
+  },
+  "homepage": "https://github.com/MedXProtocol/zos-truffle-merge#readme",
+  "dependencies": {
+    "commander": "^2.19.0",
+    "shelljs": "^0.8.3"
+  }
+}
