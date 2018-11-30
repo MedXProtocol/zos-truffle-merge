@@ -1,10 +1,11 @@
 {
   "name": "zos-truffle-merge",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Merge Zeppelin OS deployed contract addresses into their Truffle build artifacts",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "publish-and-tag": "./scripts/publish.sh $npm_package_version"
   },
   "bin": {
     "zos-truffle-merge": "./src/index.js"
