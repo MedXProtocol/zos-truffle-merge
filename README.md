@@ -14,6 +14,14 @@ Options:
   -h, --help                 output usage information
 ```
 
+For example:
+
+```
+$ zos-truffle-merge -n 3 zos.ropsten.json
+```
+
+Will merge the deployed contract addresses from Ropsten into the Truffle artifacts under network id '3' 
+
 ## Todo
 
 - Make Truffle build artifacts directory configurable.
