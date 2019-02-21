@@ -34,9 +34,8 @@ async function injectNetwork(contractName, networkId, address) {
   await writeFile(contractFile, JSON.stringify(contractConfig, null, 2))
 }
 
-Promise.all(Object.keys(zosNetworkFileJson.proxies).map(name => {
-  var proxies = zosNetworkFileJson.proxies[name]
-  var lastProxy = proxies[proxies.length - 1]
-  var contractName = name.split('/')[1]
-  return injectNetwork(contractName, networkId, lastProxy.address)
+Promise.all(Object.keys(zosNetworkFileJson.contracts).map(name => {
+  var contract = zosNetworkFileJson.contracts[name]
+  var contractName = name
+  return injectNetwork(contractName, networkId, contract.address)
 }))
