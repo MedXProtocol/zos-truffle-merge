@@ -1,10 +1,10 @@
 {
   "name": "zos-truffle-merge",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Merge Zeppelin OS deployed contract addresses into their Truffle build artifacts",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "publish-and-tag": "./scripts/publish.sh $npm_package_version"
   },
   "bin": {
@@ -28,7 +28,12 @@
   },
   "homepage": "https://github.com/MedXProtocol/zos-truffle-merge#readme",
   "dependencies": {
+    "chalk": "^2.4.2",
     "commander": "^2.19.0",
-    "shelljs": "^0.8.3"
+    "shelljs": "^0.8.3",
+    "timekeeper": "^2.1.2"
+  },
+  "devDependencies": {
+    "jest": "^24.1.0"
   }
 }
