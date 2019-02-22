@@ -1,9 +1,9 @@
-const injectNetwork = require('./injectNetwork')
-const formatArtifactPath = require('./formatArtifactPath')
-const readFile = require('./utils/readFile')
+var injectNetwork = require('./injectNetwork')
+var formatArtifactPath = require('./formatArtifactPath')
+var readFile = require('./utils/readFile')
 
 module.exports = async function injectProxies(artifactsPath, zosNetworkFilePath, networkId) {
-  const zosNetworkFileJson = JSON.parse(await readFile(zosNetworkFilePath))
+  var zosNetworkFileJson = JSON.parse(await readFile(zosNetworkFilePath))
 
   return Promise.all(Object.keys(zosNetworkFileJson.proxies).map(name => {
     var proxies = zosNetworkFileJson.proxies[name]

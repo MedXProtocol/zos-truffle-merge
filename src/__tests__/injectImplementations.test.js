@@ -1,19 +1,19 @@
-const ZosNetwork = require('./support/ZosNetwork')
-const tk = require('timekeeper')
-const injectImplementations = require('../injectImplementations')
+var ZosNetwork = require('./support/ZosNetwork')
+var tk = require('timekeeper')
+var injectImplementations = require('../injectImplementations')
 
 jest.mock('../utils/readFile')
 jest.mock('../injectNetwork')
 
-const readFile = require('../utils/readFile')
-const injectNetwork = require('../injectNetwork')
+var readFile = require('../utils/readFile')
+var injectNetwork = require('../injectNetwork')
 
 describe('injectNetwork', () => {
   it('should work', async () => {
     var now = new Date()
     tk.freeze(now.getTime())
 
-    const inputJson = JSON.stringify(ZosNetwork)
+    var inputJson = JSON.stringify(ZosNetwork)
     readFile.mockResolvedValue(inputJson)
 
     await injectImplementations("build/contracts", "zosnetwork.json", '1234')

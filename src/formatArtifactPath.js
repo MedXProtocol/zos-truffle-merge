@@ -1,7 +1,7 @@
-const path = require('path')
+var path = require('path')
 
 module.exports = function formatArtifactPath(contractName, truffleArtifactsPath) {
-  const pathIsUndefined = truffleArtifactsPath === undefined
+  var pathIsUndefined = truffleArtifactsPath === undefined
   if (pathIsUndefined) {
     truffleArtifactsPath = path.join('build', 'contracts')
   }

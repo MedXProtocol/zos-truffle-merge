@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-const program = require('./program')
+var program = require('./program')
 
 program(process.argv)

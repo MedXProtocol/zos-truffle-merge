@@ -1,10 +1,10 @@
-const program = require('../program')
+var program = require('../program')
 
 jest.mock('../injectProxies')
 jest.mock('../injectImplementations')
 
-const injectImplementations = require('../injectImplementations')
-const injectProxies = require('../injectProxies')
+var injectImplementations = require('../injectImplementations')
+var injectProxies = require('../injectProxies')
 
 describe('program', () => {
   it('should support the implementation', () => {

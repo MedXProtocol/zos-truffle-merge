@@ -1,9 +1,9 @@
 #!/usr/bin/env node
-const shell = require('shelljs')
-const { Command } = require('commander')
+var shell = require('shelljs')
+var { Command } = require('commander')
 
-const injectImplementations = require('./injectImplementations')
-const injectProxies = require('./injectProxies')
+var injectImplementations = require('./injectImplementations')
+var injectProxies = require('./injectProxies')
 
 module.exports = function (argv) {
   var prog = new Command()

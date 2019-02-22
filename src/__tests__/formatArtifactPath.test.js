@@ -1,4 +1,4 @@
-const formatArtifactPath = require('../formatArtifactPath')
+var formatArtifactPath = require('../formatArtifactPath')
 
 describe('formatArtifactPath', () => {
   it('should default to build/contracts', () => {
