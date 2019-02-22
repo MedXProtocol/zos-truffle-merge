@@ -6,7 +6,7 @@ A handy utility to merge [Zeppelin OS](https://zeppelinos.org/) deployed contrac
 
 ## Usage
 
-The command will merge all of the addresses in the given zos network json file into the truffle artifacts in `build/contracts`.
+The command will merge all of the last proxy addresses in the given zos network json file into existing truffle artifacts.
 
 ```bash
 Usage: zos-truffle-merge [options] <zos network json file>
